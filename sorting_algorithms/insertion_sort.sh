@@ -6,5 +6,5 @@
 #####################################
 
 # g++ sorting.cpp;
-g++ test.cpp;
-./a.out;
+g++ insertion_sort.cpp -o insertion_sort;
+./insertion_sort;
