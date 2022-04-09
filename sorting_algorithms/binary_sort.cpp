@@ -1,5 +1,5 @@
 /**
- * @file insertion_sort.cpp
+ * @file binary_sort.cpp
  * @author John Tan (johnchenguanzhong@gmail.com)
  * @brief Insertion sort 
  * @version 0.1
