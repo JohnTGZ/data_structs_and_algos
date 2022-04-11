@@ -8,60 +8,54 @@ struct Node{
 
 class BTree{
 public:
+    BTree(){
+        root_ = nullptr;
+    }
+
     void Insert(int key){
-        //start from root node
-        Insert(key, root_);
+        std::printf("Inserting %d \n", key);
+        Insert(root_, key);
     }
+
+
     Node* Search(int key){
-        //Search 
-        return Search(key, root_);
+        return Search(root_, key);
     }
-    void Delete(){
-        Delete(root_);
+
+    void Insert(Node*& node, int key){
+        if (node == nullptr){
+            node = new Node{key, nullptr, nullptr};
+            std::printf("   INSERTED %d \n", key);
+            return;
+        }
+        
+        if (key < node->key){
+            std::printf("   Insert LEFT \n");
+            Insert(node->left, key);
+        }
+        else{
+            std::printf("   Insert RIGHT \n");
+            Insert(node->right, key);
+        } 
+    }
+
+    Node* Search(Node*& node, int key){
+        if (node == nullptr){
+            node = new Node{key, nullptr, nullptr};
+        }
+        if (node->key == key){
+            return node;
+        }
+
+        if (key < node->key){
+            return Search(node->left, key);
+        }
+        else {
+            return Search(node->right, key);
+        }
     }
 
 private:
-    void Insert(int key, Node* leaf){
-        if (key < leaf->key){
-            if (leaf->left != nullptr){
-                Insert(key, leaf->left);
-            } else{
-                leaf->left = new Node{key, nullptr,nullptr};
-            }
-        }
-        else {
-            if (leaf->right != nullptr){
-                Insert(key, leaf->right);
-            } else{
-                leaf->right = new Node{key, nullptr,nullptr};
-            }
-        }
-    }
-    Node* Search(int key, Node* leaf){
-        if (leaf == nullptr){
-            return nullptr;
-        }
-        else if (leaf->key == key){
-            return leaf;
-        }
-
-        if (key < leaf->key){
-            Search(key, leaf->left);
-        }
-        else{
-            Search(key, leaf->right);
-        }
-
-    }
-    void Delete(Node* leaf){
-        if (leaf == nullptr)
-            return;
-        Delete(leaf->left);
-        Delete(leaf->right);
-
-        delete leaf;
-    }
-    
     Node* root_;
 
 };
