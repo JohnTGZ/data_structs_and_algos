@@ -81,13 +81,15 @@ class Node {
     void postOrder(Node *root) {
         if (root != NULL){
             //Go to left subtree
-            preOrder(root->left);
+            postOrder(root->left);
             //Go to right subtree
-            preOrder(root->right);
+            postOrder(root->right);
             //Print out node
             std::cout << root->data << " ";
         }
     }
+
+
     
     void levelOrder(Node* root){
         if (root == NULL){
