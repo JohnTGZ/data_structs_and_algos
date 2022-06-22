@@ -18,8 +18,8 @@ def computeShortestPath(s_start, s_goal):
         for s_ in neighbor(s):
             if s_ not in closedlist: #if not visited
                 if s_ not in openlist: #if not in TO VISIT list
-                    g_cost[s_] = inf;
-                    parent[s_] = NULL;
+                    g_cost[s_] = inf
+                    parent[s_] = NULL
                     updateVertex(s, s_)
     
     return "no path found"

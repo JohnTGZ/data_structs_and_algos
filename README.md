@@ -3,13 +3,17 @@
 # Sorting
 1. Binary Sort [Done]
 2. Insertion Sort [Done]
-3. Merge Sort
-4. Quick Sort
-5. Heap Sort
+3. Merge Sort [Done]
+4. Quick Sort [Done]
+5. Heap Sort [Done]
 
 # Tree traversal
 1. Breadth First Search
+    - Level order traversal
 2. Depth First Search
+    - Inorder: Left, Root, Right
+    - Preorder: Root, left, right
+    - Post order: left, right, root
 
 # Data Structures
 1. Trees
@@ -22,3 +26,4 @@
 5. Linked-list
     - Singly linked
     - Doubly linked
+6. KDTree

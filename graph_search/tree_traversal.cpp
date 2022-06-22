@@ -33,29 +33,12 @@ class Solution {
            }
         }
 
-/* you only have to complete the function given below.  
-Node is defined as  
-
-class Node {
-    public:
-        int data;
-        Node *left;
-        Node *right;
-        Node(int d) {
-            data = d;
-            left = NULL;
-            right = NULL;
-        }
-};
-
-*/
     //DFS
-        //Inorder: Left, Root, Right
-        //Preorder: Root, left, right
-        //Post order: left, right, root
+    //  Inorder: Left, Root, Right
+    //  Preorder: Root, left, right
+    //  Post order: left, right, root
         
-    //BFS
-        //Level order traversal: 
+
     void inOrder(Node *root) {
         if (root != NULL){
             //Go to left subtree
@@ -90,7 +73,8 @@ class Node {
     }
 
 
-    
+    //BFS
+    //  Level order traversal: 
     void levelOrder(Node* root){
         if (root == NULL){
             return;
