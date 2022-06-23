@@ -15,6 +15,11 @@
     - Preorder: Root, left, right
     - Post order: left, right, root
 
+
+# Graph Search
+1. Strongly Connected Components
+2. 
+
 # Data Structures
 1. Trees
     - Binary
